@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan ukuran sama */
+        grid-template-rows: repeat(
+          2,
+          150px
+        ); /* 2 baris, masing-masing 150px tinggi */
+        gap: 15px; /* jarak antar grid item */
+        padding: 10px;
+        background-color: #eee;
+      }
+      .grid-item {
+        color: white;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 8px;
+      }
+      /* Warna berbeda untuk tiap grid item */
+      .item1 {
+        background-color: #e74c3c;
+      } /* merah */
+      .item2 {
+        background-color: #3498db;
+      } /* biru */
+      .item3 {
+        background-color: #2ecc71;
+      } /* hijau */
+      .item4 {
+        background-color: #f1c40f;
+      } /* kuning */
+      .item5 {
+        background-color: #9b59b6;
+      } /* ungu */
+      .item6 {
+        background-color: #e67e22;
+      } /* oranye */
+
+      /* Atur item 2 agar menempati dua kolom */
+      .item2 {
+        grid-column: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item item1">1</div>
+      <div class="grid-item item2">2 (span 2 kolom)</div>
+      <div class="grid-item item3">3</div>
+      <div class="grid-item item4">4</div>
+      <div class="grid-item item5">5</div>
+      <div class="grid-item item6">6</div>
+    </div>
+  </body>
+</html>
